@@ -1,0 +1,75 @@
+---
+import { Icon } from 'astro-icon/components';
+const props = Astro.props;
+
+---
+
+<div class="menu" id="menu">
+    <!-- <Icon name="logos:linkedin-icon" /> -->
+    <a href="#home"> <h1 class="itemMenu">Home</h1> </a>
+    <a href="#expertice"> <h1 class="itemMenu">expertice</h1> </a>
+    <a href="#work"> <h1 class="itemMenu">Work</h1> </a>
+    
+    <a href="#experience"> <h1 class="itemMenu">ecperience</h1> </a>
+    <a href="#contact"> <h1 class="itemMenu">contact</h1> </a>
+    <!-- <Icon name="logos:vue" /> -->
+    
+        
+
+</div>
+
+<style>
+    .scrolled {
+        color: aliceblue;
+        width: 10vw !important;
+        height: 100vh !important;
+        position: fixed;
+        display: grid !important;
+        top: 0 !important; /* Asegura que el menú esté en la parte superior */
+        left: 0% !important; /* Lo mueve al centro horizontal */
+        transform: translateX(0%) !important; 
+    }
+    .scrolled:hover {
+        width: 20vw !important;
+    }
+    .menu {
+        position: fixed;
+        z-index: 200;
+        top: 0; /* Asegura que el menú esté en la parte superior */
+        left: 50%; /* Lo mueve al centro horizontal */
+        transform: translateX(-50%); 
+        
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 2rem;
+        background: rgb(0, 0, 0);
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        width: 90%;
+        padding: 0 2rem !important;
+        transition: transform 1s;
+    }
+    .itemMenu {
+        color: white;
+        font-size: 1.3rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+</style>
+<!-- <script is:inline>
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const menuBar = document.querySelector(".menu");
+
+    //     if (!menuBar) return; // Evita errores si el elemento no existe
+
+    //     window.addEventListener("scroll", function () {
+    //         if (window.scrollY > 100) {
+    //             menuBar.classList.add("scrolled");
+    //         } else {
+    //             menuBar.classList.remove("scrolled");
+    //         }
+    //     });
+    // });
+</script> -->

@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../GlobalStyles/G-styles.css";
+import Menu from "../components/Menu/Menu.astro";
+import Home from "../components/home.astro";
+import AboutMe from "../components/AboutMe/aboutMe.astro";
+import Languages from "../components/Languges/languages.astro"
+import Projects from "../components/Work/projects.astro";
+import EnConstruccion from '../components/enConstruccion.astro'
+---
+
+<Layout title="ArDev">
+	<div>
+		<Menu />
+		<main>
+			<div class="section" id="home">
+				<Home />
+			</div>
+			<div class="grid grid-cols-4 gap-4">
+				<div class="col-span-3">	
+					<div class="Fsection bgL" id="expertice">
+						<Languages />
+					</div>
+					<div class="Fsection bgR" id="work">
+						<!-- <Projects /> -->
+						<EnConstruccion>
+					</div>
+					<div class="Fsection bgL" id="experience"></div>
+					<div class="Fsection bgR" id="contact">asdsdasd</div>
+				</div>
+			</div>
+		
+		</main>
+	</div>
+
+	<style>
+		/* Fondo con blur y full viewport */
+		.section {
+			width: 100vw;
+			height: 100vh;
+		}
+		.bgL {
+			width: 100vw;
+			height: 100vh;
+		}
+		.bgr {
+			background-image: url("../assets/rigthbg.png");
+
+			/* Efecto blur */
+			position: relative;
+		}
+		/* .bg-container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.1); 
+        backdrop-filter: blur(1px); 
+    } */
+
+		/* Contenido encima del blur */
+		.bg-container > * {
+			position: relative;
+			z-index: 1;
+		}
+
+		/* Estilos generales */
+
+		.Tspan {
+			font-size: 1.2rem;
+			text-align: center;
+			color: #b0c4de;
+		}
+
+		/* 🎯 MEDIA QUERY PARA MÓVILES */
+		@media (width < 768px) {
+			.TTitle {
+				font-size: 1.2rem;
+				color: #ffd700; /* Amarillo en móviles */
+			}
+
+			.Tspan {
+				font-size: 1rem;
+				color: #ff4500; /* Naranja en móviles */
+			}
+			/* .bg-container {
+			background-image: url('../assets/rigthbg.png');   
+
+        }
+			.bg-container::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			backdrop-filter: blur(0); 
+    	} */
+			
+		}
+	</style>
+</Layout>

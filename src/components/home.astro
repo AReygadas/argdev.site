@@ -1,0 +1,95 @@
+---
+import { Icon } from 'astro-icon/components';
+const props = Astro.props;
+---
+
+<div class="bgF">
+    <h1 class="Tname">Arturo Reygadas González</h1>
+    <h2 class="TTitle">Software Engineer</h2>
+    <br/>
+    <br/>
+
+    <span class="spanD"> Hi, I'm Arturo, a multidisciplinary systems engineer with extensive experience developing mobile, desktop, 
+        and web applications, encompassing every process involved in creating technological solutions from analysis, 
+        design, development, testing, and deployment of IT products. </span>
+    <!-- <Icon size={50 } name="logos:linkedin-icon" /> -->
+</div>
+
+<style>
+    .spanD{
+        width: 50vw;
+        font-size: 1.5rem;
+        text-align:justify;
+        background: rgba(4, 164, 228, 0.103);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        padding: 0.9rem;
+    }
+    .bgF {
+        width: 100vw !important;
+        height: auto !important;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-image: url("../assets/buact.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 2rem 5rem;
+
+        /* Efecto blur */
+        /* position: relative; */
+    }
+    .Tname {
+        color: aliceblue;
+        font-size: 4rem;
+        text-align: center;
+    }
+    .TTitle {
+        color: #f0f0f0;
+        font-size:3rem;
+        text-align: center;
+        background: linear-gradient(
+            to right,
+            #6af1ff,
+            #11d4cb,
+            #003bff,
+            #1bc4ca,
+            #6af1ff
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 3.5s linear infinite;
+    }
+
+    @keyframes animate-gradient {
+        from {
+            background-position: 200%;
+        }
+        to {
+            background-position: 0%;
+        }
+    }
+
+    @media (width < 768px) {
+        .bgF {
+            padding: 1rem !important;
+            align-items: center;
+            justify-content: center;
+        }
+        .spanD{
+            width: 100vw !important;
+        }
+        .Tname{
+            font-size: 2rem !important;
+            margin: 0 !important;
+            padding:0 !important;
+        }
+    }
+</style>
